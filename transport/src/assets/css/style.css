@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap");
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  --main-bg-color:#7DB345;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+div a,
+.navbar-brand {
+  font-size: 1.8rem;
+}
+#nav-map{
+  height: 300px;
+}
+#nav-img-block {
+  display: flex; /* 使用 flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */ /* display: flex; */
+}
+#car-img,
+#car-text {
+  flex-shrink: 0; /* 防止文字被压缩 */
+  vertical-align: middle;
+  animation: move 2s;
+  display: table-row;
+  text-align: right;
+  /* margin: 0 auto; */
+  /* font-family: "Noto Sans TC", sans-serif; */
+  /* display: flex; */
+  /* justify-content: center; */
+  
+}
+#car-img{
+  
+}
+#bg-text {
+	flex-shrink: 0;
+	vertical-align: middle;
+	animation: moveToLeft 2s;
+	display: table-row;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 1.8rem;
+}
+
+#bg-img{
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 900px){
+	#bg-text{
+    flex-shrink: initial;
+		font-size: 1rem;
+	}
+  #nav-map{
+    height: 200px;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translate(-500%, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveToLeft {
+	from {
+	  transform: translate(500%, 0);
+	}
+  
+	to {
+	  transform: translate(0, 0);
+	}
+  }
+
+.btn-costume {
+  /* background-color: #ecf2f2; */
+  background-color: var(--main-bg-color);
+  /* border-color: #7DB345; */
+  /* color: #7db345; */
+  color: #fff;
+  /* border-width: 2px; */
+  border-left: none;
+  font-weight: bolder;
+  border-radius: 0%;
+}
+.card {
+  /* border-color: #9bb381; */
+  /* border-color: #dc3545; */
+  border-width: 0px;
+  box-shadow: 10px 15px 10px -10px;
+}
+.big-card{
+  border:solid;
+  border-color: var(--main-bg-color);
+  border-width: 4px;
+  /* box-shadow: 10px 15px 10px -10px; */
+}
+.btn-costume:hover {
+  /* background-color: #92bc64; */
+  background-color: #889602;
+  color: #fff;
+}
+
+.fly-img {
+  transition: 0.8s;
+}
+
+.fly-img:hover {
+  scale: 110%;
+}
+/* Footer */
+footer {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px Noto Sans TC;
+  padding: 55px 50px;
+  margin-top: 80px;
+  bottom: 0;
+  color: #fff;
+}
+
+.footer-navigation h3 {
+  margin: 0;
+  font: normal 36px Cookie, cursive;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-navigation h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-navigation h3 span {
+  color: #5383d3;
+}
+
+.footer-navigation p.links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-navigation p.company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer-contacts {
+    margin: 30px 0;
+  }
+}
+
+.footer-contacts p a{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.footer-contacts a{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+/* .footer-contacts p a {
+  color: #5383d3;
+  text-decoration: none;
+} */
+
+.fa.footer-contacts-icon {
+  background-color: #33383b;
+  color: #fff;
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 38px;
+  margin: 10px 15px 10px 0;
+}
+
+span.new-line-span {
+  display: block;
+  font-weight: normal;
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 3;
+}
+
+.footer-about h4 {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-about p {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+div.social-links {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
