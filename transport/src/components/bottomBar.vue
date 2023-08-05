@@ -4,13 +4,13 @@
       <h3>
         <a href="index.html">{{ companyName }}<span></span></a>
       </h3>
-      <p class="links">
-        <div v-for="(item, index) in page" :key="index">
-          <strong> · </strong>
-          <a :href= "pageLink[index]" >{{item}}</a>
-        </div>
-      </p>
-      <p class="company-name">{{companyName}} © 2023</p>
+
+      <div class="links" v-for="(item, index) in page" :key="index">
+        <strong> · </strong>
+        <a :href="pageLink[index]">{{ item }}</a>
+      </div>
+
+      <p class="company-name">{{ companyName }} © 2023</p>
     </div>
     <div class="col-sm-6 col-md-4 footer-contacts">
       <a :href="'tel:' + phone">

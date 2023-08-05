@@ -4,9 +4,23 @@
     style="background-color: #292c2f"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" style="color: #7db345; font-weight: bold">{{
+      <!-- <a class="navbar-brand" style="color: #7db345; font-weight: bold">{{
         companyName
-      }}</a>
+      }}</a> -->
+      <router-link
+        to="/"
+        class="navbar-brand"
+        style="color: #7db345; font-weight: bold"
+      >
+        {{ companyName }}
+      </router-link>
+      <!-- <router-link
+        to="/test"
+        class="navbar-brand"
+        style="color: #7db345; font-weight: bold"
+      >
+        {{ companyName }}
+      </router-link> -->
       <button
         class="navbar-toggler"
         type="button"
@@ -21,9 +35,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" v-for="(item, index) in page" :key="index">
-            <a class="nav-link" style="color: #fff" :href="pageLink[index]">
+            <router-link
+              class="nav-link"
+              style="color: #fff"
+              :to="pageLink[index]"
+            >
               {{ item }}
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>

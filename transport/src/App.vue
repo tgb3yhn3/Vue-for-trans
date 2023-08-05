@@ -1,6 +1,11 @@
 <template>
   <navBar :companyName="companyName" :page="page" :pageLink="pageLink">
   </navBar>
+  <router-view v-slot="{ Component, route }">
+    <transition :name="route.meta.transition || 'enter'">
+      <component :is="Component" /> </transition
+  ></router-view>
+  <sideCard></sideCard>
   <footer>
     <bottomBar
       :companyName="companyName"
@@ -13,6 +18,7 @@
 <script>
 import navBar from "./components/navBar.vue";
 import bottomBar from "./components/bottomBar.vue";
+import sideCard from "./components/sideCard.vue";
 //import css
 import "./assets/css/style.css";
 export default {
@@ -20,16 +26,13 @@ export default {
   components: {
     navBar,
     bottomBar,
+    sideCard,
   },
   data() {
     return {
       companyName: "竹南機場接送",
-      page: ["竹南機場接送", "竹南九人座機場接送", "聯絡我們"],
-      pageLink: [
-        "index.html",
-        "./pages/airportTrans.html",
-        "./pages/contact.html",
-      ],
+      page: ["竹南九人座機場接送", "聯絡我們"],
+      pageLink: ["/test", "./pages/contact.html"],
     };
   },
   props: {},
@@ -39,5 +42,26 @@ export default {
 <style>
 * {
   box-sizing: border-box;
+}
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+/* 下面我们会解释这些 class 是做什么的 */
+.enter-enter-active {
+  transition: all 2s ease;
+}
+.enter-leave-active {
+  transition: all 0.5s ease;
+}
+.enter-enter-to,
+.enter-leave-from {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.enter-leave-to,
+.enter-enter-from {
+  opacity: 0;
+  transform: translateY(100%);
 }
 </style>
