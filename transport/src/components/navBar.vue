@@ -1,7 +1,7 @@
 <template>
   <nav
     class="navbar navbar-expand-lg navbar-dark"
-    style="background-color: #292c2f"
+    style="background-color: #141022"
   >
     <div class="container-fluid">
       <!-- <a class="navbar-brand" style="color: #7db345; font-weight: bold">{{
@@ -10,7 +10,7 @@
       <router-link
         to="/"
         class="navbar-brand"
-        style="color: #7db345; font-weight: bold"
+        style="color: #f2e63c; font-weight: bold"
       >
         {{ companyName }}
       </router-link>

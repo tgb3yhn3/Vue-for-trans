@@ -30,9 +30,9 @@ export default {
   },
   data() {
     return {
-      companyName: "竹南機場接送",
-      page: ["竹南九人座機場接送", "聯絡我們"],
-      pageLink: ["/test", "./pages/contact.html"],
+      companyName: "好望角租車-苗栗機場接送",
+      page: ["竹南機場接送", "頭份機場接送", "後龍機場接送", "聯絡我們"],
+      pageLink: ["/zhunan", "/toufen", "/houlong", "/about"],
     };
   },
   props: {},
