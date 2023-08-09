@@ -21,6 +21,7 @@ import bottomBar from "./components/bottomBar.vue";
 import sideCard from "./components/sideCard.vue";
 //import css
 import "./assets/css/style.css";
+import "./assets/fonts/font-awesome.min.css";
 export default {
   name: "App",
   components: {
@@ -43,11 +44,8 @@ export default {
 * {
   box-sizing: border-box;
 }
-/*
-  Enter and leave animations can use different
-  durations and timing functions.
-*/
-/* 下面我们会解释这些 class 是做什么的 */
+
+/* mainContent 轉場動畫 */
 .enter-enter-active {
   transition: all 2s ease;
 }
