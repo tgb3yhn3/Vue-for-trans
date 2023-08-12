@@ -3,8 +3,9 @@
   </navBar>
   <router-view v-slot="{ Component, route }">
     <transition :name="route.meta.transition || 'enter'">
-      <component :is="Component" /> </transition
-  ></router-view>
+      <component :is="Component" :key="route.path" />
+    </transition>
+  </router-view>
   <sideCard></sideCard>
   <footer>
     <bottomBar

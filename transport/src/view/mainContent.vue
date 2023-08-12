@@ -8,6 +8,7 @@
         :line="line"
         :phone="phone"
         :facebook="facebook"
+        :srcPath="srcPath"
       ></mainCard>
     </div>
   </div>
@@ -25,6 +26,7 @@ export default {
     facebook: String,
     from: String,
     card: Array,
+    srcPath: String,
   },
 
   // data() {

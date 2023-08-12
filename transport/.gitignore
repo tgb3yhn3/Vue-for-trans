@@ -5,6 +5,7 @@ firebase.json
 .firebase
 /dist
 
+.firebase
 
 # local env files
 .env.local

@@ -19,7 +19,7 @@
               <div class="row">
                 <div class="col-8 fly-img">
                   <img
-                    src="../assets/pictures/small_fly.webp"
+                    :src="srcPath"
                     style="
                       border-radius: 20px 0 0 20px;
                       padding-left: 0;
@@ -135,6 +135,9 @@ export default {
       type: String,
     },
     facebook: {
+      type: String,
+    },
+    srcPath: {
       type: String,
     },
   },
